@@ -1,0 +1,118 @@
+////menu
+header nav.navbar-default, .container-fluid{
+    padding: 0;
+    margin: 0;
+    div.navbar-collapse{
+        padding: 0;
+        margin: 0;
+        .moduletable{
+            ul.nav.menu{
+                background: $gray-dark;
+                margin: 0;
+                padding: 0;
+                height: auto;
+                list-style: none;
+                text-align: center;
+                font-size: 0;
+                white-space: nowrap;
+                > li{
+                    display: inline-block;
+                    background: $gray-light;
+                    > a{
+                        min-height: auto;
+                        padding: 1.2em 1em;
+                        margin: 0; 
+                        font:400 1.8rem/3rem $font;
+                        text-transform: uppercase;
+                        @include smooth(200ms);
+                        color: #fff;
+                        background: $gray-dark;
+                        &:hover{
+                            background: $second;
+                            color: #eee;
+                            text-decoration: none;
+                        }
+                    }
+                    // li avec sous menu
+                    &.parent{
+                        position: relative !important;
+                        height: auto;
+                        &:hover{
+                            > a{
+                                background: $second;
+                                color: #fff;
+                            }
+                            > ul.nav-child{
+                                display: inline-block;
+                            }
+                        }
+                        > a:after{
+                            font-family: "FontAwesome";
+                            content:"\f107";
+                            padding-left:10px;
+                        }
+                    }
+                    &.current, &.active{
+                        > a{
+                            background: $second;
+                            color: #fff;                
+                        }
+                    }
+                    ////// sous menus //////
+                    ul.nav-child {
+                        display: none;
+                        position: absolute;
+                        left: 0;
+                        top: 73px;
+                        background:$gray-light;
+                        padding: .5em;
+                        width: 200px;
+                        text-align: left;
+                        z-index: 200;
+                        > li{
+                            display: block;
+                            padding: .5em;
+                            margin: 0;
+                            @include smooth(200ms);
+                            position: relative;
+                            &:hover{
+                                background: $gray;
+                            }
+                            > a{
+                                display: block;
+                                color: #fff;
+                                padding: .5em;
+                                font:400 1.4rem/1.8rem $font;
+                                &:after{
+                                    font-family: "FontAwesome";
+                                    content:"\f105";
+                                    position: absolute;
+                                    right: .3em;
+                                }
+                            }
+
+                            /// sous sous menu
+                            &.parent{
+                                &:hover{
+                                    .nav-child{
+                                        display:block;
+                                    }
+                                }
+                                ul{
+                                    background: $gray-light;
+                                    top:0;
+                                    left:200px;
+                                    li a{
+                                        &:after{
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }//fin >li        
+            }//fin >ul.menu
+        }
+    }//fin navbar collapse
+}//fin container fluid

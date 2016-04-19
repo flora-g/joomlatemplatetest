@@ -1,0 +1,322 @@
+
+/// DE L'IPAD HORIZONTAL
+@media (min-width:1199px){  
+    li.parent .button{
+        display: none !important;
+    }
+}//fin au dessus de 1199px
+
+
+@media(max-width:1024px){
+    
+    /// MENU
+    header nav.navbar-default, .container-fluid  div.navbar-collapse{
+        ul.nav.menu{
+            > li{
+                border-right: solid 1px #fff;
+                border-left: solid 1px #fff;
+
+                //// menu parent
+                &.parent{
+                    > a{
+                        padding-right:3em !important;
+                        &:after{
+                            display: none;
+                        }
+                    }
+                    ///sous-menu
+                    > .button{
+                        position: absolute;
+                        right: .5em;
+                        top: .9em;
+                        font:400 2.5rem/2.5rem 'FontAwesome'; 
+                        color: #fff !important;
+                    }                          
+                    > ul.nav-child {
+                        position: absolute;
+                        top: inherit;
+                        width: 100% !important;
+                        > li.parent{
+                            > a{
+                                height: auto;
+                                border-bottom: solid 1px #fff;
+                                text-align: center !important;
+                                font-size: 1.6rem;
+                                &:after{
+                                    content:"\f107" !important;
+                                }
+                            }
+                             ///sous-sous-menu
+                            ul.nav-child{
+                                left:inherit  !important;
+                                top: inherit  !important;
+                                width: auto !important;
+                                position:inherit !important;
+                                 a{
+                                    width: 100%;
+                                    height: auto;
+                                    text-align: center;
+                                }
+                            }
+                            }// fin >li.parent 
+                        }//fin >ul.nav-child                            
+                    }//fin menu parent   
+                }// fin >li
+            }//fin >ul.menu
+        }//fin navbar collapse        
+}
+
+
+/// IPAD HORIZONTAL ET VERTICAL
+@media (min-width:768px) and (max-width:1024px){ 
+    
+    
+    //logo
+    img.logoheader{
+        max-width: none;
+        width: 150%;
+        padding-top: .5em;
+    }
+    
+    
+    //baseline
+    p.baseline{
+        font-size: 2.5rem;
+    }
+    
+    
+    /// Zone telephone
+    div.customtelephone{
+        background-color:$second;
+        color:#fff !important;
+        padding:.1rem 0;
+        margin:0;
+        text-align:center;
+        p{
+            font-size:1.7rem;
+            color:#fff !important;
+        }
+    }//fin div numero telephone
+    
+    
+    
+    
+    ////SLIDER
+    #slider{
+        .slide-desc-text{
+            padding: 15px 35px 5px;
+            .slide-title{
+                font: 2.2rem $font;
+            }
+            .slide-text{
+                font: 1.5rem $font;
+            }
+        }
+    }//fin slider
+    
+    
+    /////COLONNE DROITE module connexion
+    div.rightcolumn .moduletable{
+        h3{
+            font-size: 1.2em !important;
+        }
+        div.control-group{
+            margin: 5px 0 0 0;
+            label.control-label{
+                font-size:0.9em;
+            }
+            input.inputbox{
+                margin-left: 0!important;
+            }
+            .btn{
+                font-size: 1.2rem!important;
+            }
+        }
+        ul.unstyled{
+            list-style: none !important;
+            padding: 0 0 20px 0 !important;
+            margin: 0 !important;
+            li a{
+                text-align: left  !important;
+                font-size: 0.9em !important;
+            }
+        }
+        div.input-prepend input.input-small{
+              width: 110px;
+        }
+        div.search .inputbox{
+                width: 105px;
+        }
+    }// fin colonne de droite module connexion
+
+
+}//fin IPAD HORIZONTAL ET VERTICAL
+
+
+
+/// AU DESSUS DE 768PX
+
+@media (min-width:768px){
+     
+    
+}//fin au-dessus de 768px
+
+
+/// EN DESSOUS DE 800PX
+@media (max-width:800px){
+
+
+}//fin en dessous de 800px
+
+/// EN DESSOUS DE 768PX
+@media (max-width:767px){
+    /// Zone telephone
+    div.customtelephone p{
+        font-size:1.6rem;
+    }//fin numero telephone
+    
+    ///SLIDER
+    #slider{
+        #djslider100 {
+            .slide-desc-text-default{
+                display: none;
+            }
+            #navigation100 img{
+                margin-top: 7%;      
+            }
+        }// fin #djslider100    
+    }//fin slider
+    
+    /// MENU
+    header nav.navbar-default, .container-fluid{
+        border:none;
+        background-color: $gray-dark;
+        min-height: inherit;
+        div.navbar-header{
+            border:none; 
+            margin: 0;
+            //bouton menu responsive
+            button.navbar-toggle{
+                background-color: $gray-dark;
+                color: #fff;
+                font-family: $font;
+                border: none;
+                display: block;
+                width: 100%;
+                border-radius:0;
+                margin: 0;
+                padding: 0.5em 0;
+                text-align: left;
+                float: none;
+                .wrap,
+                .txt{
+                    display: block;
+                    float: left;
+                    margin: 0 .3em 0;
+                }
+                .hamburger{
+                    display: block !important;
+                    width:auto;
+                    height: auto;
+                    margin: 0 .5em;
+                    padding: .3em 0;
+                    overflow: hidden;
+                    &.open .icon-bar{
+                    //animation des barres de l'icone à l'ouverture du menu
+                    background: #fff;
+                    &:first-child {
+                        @include rotate(45deg);
+                        @include transform-origin(2px);
+                      }
+                      &:nth-child(2) {
+                        opacity: 0;
+                      }
+                      &:nth-child(3) {
+                        @include rotate(-45deg);
+                        @include transform-origin(1px);
+                        transform-origin: 1px 50%;
+                        }
+                    }
+                    .icon-bar{
+                        @include smooth(300ms);                   
+                        display: block;
+                        width: 25px;
+                        height: 3px;
+                        margin: 0 0 5px;
+                        background: #fff;
+                    }//fin icone bar                  
+                }//fin hamburger                   
+            }//fin button.navbar-toggle
+        }// div.navbar-header    
+        div.navbar-collapse{
+            ul.nav.menu{
+                width: 100%;
+                position: inherit;
+                top: inherit;
+                text-align: left !important;
+                > li{
+                    display:block !important;
+                    clear: both;
+                    border-bottom: solid 1px #fff;
+                    a{
+                        display: block !important;
+                        white-space: inherit;
+                        padding:1.2em .5em !important;
+                    }                    
+                    //// menu parent
+                    &.parent{ 
+                        ///sous-menu
+                        > a{
+                             padding:1.2em 75px 1.2em .5em !important;
+                        }
+                        > .button{
+                            position: absolute;
+                            color: #fff;
+                            right: 0 !important;
+                            top: 0 !important;
+                            bottom: 1px !important;
+                            background: $primary-dark;
+                            padding: 1em;
+                        }  
+                        > ul.nav-child {
+                            position: inherit;
+                            left: inherit;
+                            top: inherit;
+                            width: 100%;
+                        }//fin >ul.nav-child                         
+                    }//fin menu parent   
+                }// fin >li
+            }//fin >ul.menu
+        }//fin navbar collapse
+    }//fin menu
+    //////////    
+  ////////// fin du menu
+    
+    //colonne droite module connexion  
+    div.rightcolumn .moduletable{
+        label.control-label{
+            margin-right: 0;
+        }
+        input#modlgn-remember{
+            margin-left: 20px!important;
+        }
+    }
+}//fin moins de 768PX
+    
+
+
+
+@media (max-width:667px){
+
+}
+
+ 
+@media (min-width:414px) and (max-width:667px){
+
+}
+
+
+@media (max-width:414px){
+    
+}
+    

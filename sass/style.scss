@@ -1,0 +1,17 @@
+//// IMPORT DES FICHIERS SASS
+@import 'normalize';
+@import 'typos';
+@import 'variables';
+@import 'structure';
+@import 'header';
+@import 'footer';
+@import 'menu';
+@import 'content';
+@import 'responsive';
+
+//// IMPORT DU FONTAWESOME
+@import 'fontawesome/font-awesome';
+
+//// IMPORT BOOTSTRAP CSS
+@import 'bootstrap-theme.min.css';
+@import 'bootstrap.min.css';

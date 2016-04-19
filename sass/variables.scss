@@ -1,0 +1,171 @@
+$template_directory_uri: "../images";
+@function get-path-to-assets($template_directory_uri){
+  @return $template_directory_uri;
+}
+
+// Couleurs principales
+$primary:		   #333;  //gris
+$primary-light:    lighten($primary, 18%);
+$primary-lighter:  lighten($primary, 10%);
+$primary-dark:     darken($primary, 5%);
+
+$second:           #e6a800; // jaune
+$second-light:     lighten(#e6a800, 20%); // jaune clair
+
+$third:           #5fa9d8; // bleu ciel
+
+$red:           #b80f24;
+$red-light:     #d02036;
+
+
+// LES GRIS
+$gray-base:		#000;
+$gray-darker:  lighten(#000, 9%); // #141414
+$gray-dark:    lighten(#000, 20%);   // #333
+$gray:         lighten(#000, 42%); // #555
+$gray-light:   lighten(#000, 78%); // #c6c6c6
+$gray-lighter: lighten(#000, 93.5%); // #eee
+
+
+// LES COULEURS
+$brand-primary: darken(#d0043c, 6.5%); // #337ab7
+$brand-success: #95d03a;
+$brand-info:    #5fa9d8;
+$brand-warning: #f0ad4e;
+$brand-danger:  #d9534f;
+
+// MIXINS
+
+// les arrondis
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;    
+}
+
+// Box shadow
+@mixin box-shadow($string){
+	-webkit-box-shadow: $string;
+	-moz-box-shadow:    $string;
+	box-shadow:         $string;
+}
+
+// effect
+@mixin smooth($time){
+    transition-property: all;
+    transition-duration: $time;
+    transition-timing-function: ease;
+}
+
+//menu tansition open close
+@mixin rotate ($deg) {
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    transform: rotate($deg);
+}
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+@mixin transition-property($transition) {
+    -moz-transition-property:    $transition;
+    -o-transition-property:      $transition;
+    -webkit-transition-property: $transition;
+    transition-property:         $transition;
+}
+@mixin transition-duration($duration) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+//
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+a:focus,
+a:active
+a:hover{
+    outline:0 !important;
+    box-shadow: none !important;
+}
+
+
+.alignleft{
+    float: left;
+    width: auto;
+    margin: 0 1em 1em 0;
+}
+.alignright{
+    float: right;
+    width: auto;
+    margin: 0 0 1em 1em;
+}
+.aligncenter{
+    text-align: center !important; 
+    margin: .5em auto;
+    width: auto !important; 
+    float: none !important; 
+    display: inline !important; 
+    height: auto;
+}
+
+.alignnone {
+    width: auto;
+    float: none;
+}
+
+// LES BOUTONS
+.bouton{
+    display: inline-block;
+    padding: .3em .5em;
+    font-size: 1.4rem;
+    font-family: $font-b;
+    text-align: center;
+    clear: both;
+    @include smooth(300ms);
+    @include border-radius(0);
+    &:hover{
+        @include smooth(300ms);
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+// READMORE ET BOUTON
+.readon, .zemore{
+    @extend .bouton;
+    color: $primary !important; 
+    border:solid 1px $primary;
+    background: #fff;
+    &:hover{
+        color: #fff !important;
+        background:$primary;
+    }
+}
+.readon-b{ // bouton noir
+    @extend .bouton;
+    color: #fff !important;
+    background: $gray-base;
+}
+
+.readon-w{ // bouton blanc
+    @extend .bouton;
+    color: $primary !important;
+    background: transparent;
+    border: solid 1px $primary;
+    &:hover{
+        color:$second !important;
+        border:1px solid $second;
+    }   
+}
+
+
+
+

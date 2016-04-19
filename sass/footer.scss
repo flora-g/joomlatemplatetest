@@ -1,0 +1,23 @@
+//////////////////////
+// FOOTER
+//////////////////////
+
+footer{
+    background: $second;
+	height:auto;
+    font-family: $font;
+    overflow: hidden;
+    text-align: center;
+    padding: 4em;   
+    p{
+        color:#fff;
+    }     
+    div#footer-menu ul.mostread{
+        padding: 0 !important;
+        margin: 0 !important;
+        li{
+            list-style: none !important;
+          }
+    }
+}
+

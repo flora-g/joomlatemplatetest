@@ -1,0 +1,42 @@
+header{
+    background-color:$gray-light;
+	h1, .baseline{     
+        font:700 4rem $font;
+        color:$gray-base; 
+        padding: 20px; 
+        margin:0;
+        text-align: center;
+        line-height: 4rem;
+	}
+    //logo
+    img.logoheader{
+        padding-top: 0.5em;
+    }
+    div.customtelephone{
+		padding:0;
+		margin:0;
+		text-align:center;
+        p{margin: 0}
+        a{
+            display: block;
+            background-color:$second;
+            text-align: center;
+            color:#fff;
+            text-decoration:none;
+            font:400 2rem $font;
+            padding: 1.5em 0;
+            &:hover{
+                color:$gray !important;
+             }
+            &:before{
+                display:inline-block;
+                font:2rem "FontAwesome";
+                content: "\f095";
+                line-height:normal;
+                margin:0 .3em 0 0;
+                padding:0;
+                color:#fff!important;
+            } 
+        }
+    }
+}//fin header

@@ -1,0 +1,73 @@
+.page{ // Font principal
+    font-family: $font;
+}
+
+.noscript{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background: #000;
+    text-align: center;
+    color: #fff;
+    padding: .5em 0;
+}
+
+.leftcolumn{
+     background-color: #eee;
+}
+.rightcolumn{
+    background-color: #eee;
+}
+.aligncenter{
+    text-align: center !important; 
+    margin: .5em auto;
+    width: auto !important; 
+    float: none !important; 
+    display: inline !important; 
+    height: auto;
+}
+
+
+/// TO TOP
+.totop {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  /* image replacement properties */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.8) url('#{$template_directory_uri}/cd-top-arrow.svg') no-repeat center 50%;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+  z-index:10;
+  -webkit-border-radius:80px;
+  border-radius:80px;
+  z-index:9999;
+}
+.totop.cd-is-visible, .totop.cd-fade-out, .no-touch .cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+.totop.cd-is-visible {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+.totop.cd-fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+.no-touch .totop:hover {
+  background-color: #000;
+  opacity: 1;
+}
+.totop:focus{outline:none}
