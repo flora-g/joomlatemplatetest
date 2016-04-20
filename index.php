@@ -6,7 +6,10 @@ $templateparams = $app->getTemplate(true)->params;
 $this->language = $doc->language;
 $this->direction = $doc->direction;
 $menu = $app->getMenu();
+
 test
+echo 'hoho';
+echo 'toto';
 
 // HACK POUR ACTIVER LES FICHIER MOOTOOLS CORE
 //JHtml::_('behavior.framework', true);
