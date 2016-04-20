@@ -10,6 +10,7 @@ $menu = $app->getMenu();
 test
 echo 'hoho';
 echo 'toto';
+echo 'branche index2';
 
 // HACK POUR ACTIVER LES FICHIER MOOTOOLS CORE
 //JHtml::_('behavior.framework', true);
