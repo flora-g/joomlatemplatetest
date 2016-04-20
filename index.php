@@ -7,6 +7,7 @@ $this->language = $doc->language;
 $this->direction = $doc->direction;
 $menu = $app->getMenu();
 echo 'hoho';
+echo 'toto';
 // HACK POUR ACTIVER LES FICHIER MOOTOOLS CORE
 //JHtml::_('behavior.framework', true);
 JHtml::_('bootstrap.framework');
