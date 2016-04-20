@@ -1,6 +1,6 @@
 A simple responsive template for Joomla. 
 =================================
-testons encore une fois 
+
 ### Code your site in local with sass and automatic upload files on server
 
 Base on http://ordasoft.com/ordasoft-joomla-blank-template.html, it include gulp and sass. It also include a light Bootstrap 3.0 (mainly for the grid style).
