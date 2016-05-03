@@ -7,11 +7,6 @@ $this->language = $doc->language;
 $this->direction = $doc->direction;
 $menu = $app->getMenu();
 
-test
-echo 'hoho';
-echo 'toto';
-echo 'branche index2-3';
-
 // HACK POUR ACTIVER LES FICHIER MOOTOOLS CORE
 //JHtml::_('behavior.framework', true);
 JHtml::_('bootstrap.framework');
