@@ -61,7 +61,7 @@ $brand-danger:  #d9534f;
     transform: rotate($deg);
 }
 @mixin transform-origin ($origin) {
-    moz-transform-origin: $origin;
+    -moz-transform-origin: $origin;
     -ms-transform-origin: $origin;
 	-webkit-transform-origin: $origin;
     transform-origin: $origin;
