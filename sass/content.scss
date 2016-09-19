@@ -68,13 +68,6 @@ body{
     z-index:0 !important;
     overflow:hidden;
     background:$second;
-    padding: 0 !important;
-    margin: 0 !important;
-    #djslider-loader100 {
-        margin: 0 auto;
-        position: relative;
-        padding: 0 !important;
-    }
     .slide-desc-text{
         padding: 35px 65px 25px;
         .slide-title{
@@ -86,33 +79,12 @@ body{
             font-family: $font;
         }
     }
-    #djslider100 {
-        margin: 0 auto;
-        position: relative;
-        #slider-container100 {
-            position: absolute;
-            overflow:hidden;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
+    .navigation-container{
+        img{
+            height: auto;
+            width: auto;
         }
-        #navigation100 {
-            img{
-                cursor: pointer;
-                display: block;
-                position: absolute;
-                width: auto;
-                margin-top: 12%;
-                #prev100{
-                    left: 0;                                  
-                }
-                #next100{
-                    right: 0;
-                }
-            }
-        }
-    }    
+    }
 }
 	
 //// BREADCRUMBS	
