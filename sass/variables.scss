@@ -126,7 +126,7 @@ a:hover{
     text-align: center;
     clear: both;
     @include smooth(300ms);
-    @include border-radius(0);
+    @include radius(0);
     &:hover{
         @include smooth(300ms);
         text-decoration: none;
