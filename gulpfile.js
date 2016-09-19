@@ -57,7 +57,7 @@ gulp.task( 'deploy', function () {
 
 //Watch task
 gulp.task('default',function() {   
-    gulp.watch('./src/**/*.scss',['build', 'prod']); //watch change one scss and create two css file
+    gulp.watch('./sass/**/*.scss',['build', 'prod']); //watch change one scss and create two css file
     gulp.watch('./css/**/style.min.css', ['deploy']); //watch change one style.min.css and deploy on FTP
     livereload.listen();
 });
