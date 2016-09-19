@@ -9,43 +9,39 @@ jQuery(document).ready(function ($) {
         }
 
         // création du bouton pour afficher sous menu
-        var zetext = $( ".navbar-collapse" ).find( ".nav-child" );
-        
-        var moretxt = "fa-plus-circle";
-        var lesstxt = "fa-minus-circle";
-       
-        
-        if (windowsize < 1199) {   
-            
-            zetext.hide();          
+        $(".navbar-default li.parent").each(function(){
 
-            $( "<i></i>" ).appendTo('li.parent').addClass( "button fa-plus-circle" ).click(function (){
-                    if (zetext.is(":hidden")) {
-                        zetext.slideDown("200");
-                        $(this).toggleClass(lesstxt).removeClass(moretxt);      
-                    } else {
-                        zetext.slideUp("200");
-                        $(this).toggleClass(moretxt).removeClass(lesstxt);      
-                    }
-            });	
-       
-        } else if (windowsize >= 1199) {
-                
-                $('li.parent').find(".button").hide();        
-        };
+		var zetext = $(this).find( ".nav-child" );
+				
+		var moretxt = "fa-plus-circle";
+		var lesstxt = "fa-minus-circle";			
+	
+		if (windowsize < 1199) {   
+			
+			zetext.hide();
+			
+			$( "<i></i>" ).appendTo(this).addClass( "button fa-plus-circle" ).click(function (){
+				if (zetext.is(":hidden")) {
+					zetext.slideDown("200");
+					$(this).toggleClass(lesstxt).removeClass(moretxt);      
+				} else {
+					zetext.slideUp("200");
+					$(this).toggleClass(moretxt).removeClass(lesstxt);      
+				}
+			});	
+	   
+	   
+		} else if (windowsize >= 1199) {
+			$('.navbar li.parent').find(".button").hide();	   
+		};
+	});
         
     }
     
 	// Execute on load
 	checkWidth();	
 
-});
 
-
-
-
-jQuery(document).ready(function ($) {
-	
 	
 	////////////////////////////////// Afficher le tél
 	$("#number").click(function(){
@@ -79,8 +75,8 @@ jQuery(document).ready(function ($) {
 	});
 	
 	//ouverture fermeture hamburgers
-    $(".hamburger").click(function() {
-      $(this).toggleClass("open");
-    });	
+	    $(".hamburger").click(function() {
+	      $(this).toggleClass("open");
+	    });	
    
 });

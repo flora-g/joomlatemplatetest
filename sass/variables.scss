@@ -37,16 +37,12 @@ $brand-danger:  #d9534f;
 // MIXINS
 
 // les arrondis
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
+@mixin radius($radius) {
     border-radius: $radius;    
 }
 
 // Box shadow
 @mixin box-shadow($string){
-	-webkit-box-shadow: $string;
-	-moz-box-shadow:    $string;
 	box-shadow:         $string;
 }
 
@@ -65,7 +61,7 @@ $brand-danger:  #d9534f;
     transform: rotate($deg);
 }
 @mixin transform-origin ($origin) {
-    moz-transform-origin: $origin;
+    -moz-transform-origin: $origin;
     -ms-transform-origin: $origin;
 	-webkit-transform-origin: $origin;
     transform-origin: $origin;
@@ -165,7 +161,3 @@ a:hover{
         border:1px solid $second;
     }   
 }
-
-
-
-
